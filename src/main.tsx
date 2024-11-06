@@ -1,13 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
 import { MantineProvider } from '@mantine/core';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import '@mantine/core/styles.css';
 
 
 createRoot(document.getElementById('root')!).render(
   <MantineProvider>
     <StrictMode>
-      <App />
+      <RouterProvider router={router}/>
     </StrictMode>
   </MantineProvider>
 )

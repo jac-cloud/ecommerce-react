@@ -1,24 +1,24 @@
 import { ActionIcon, Box, Button, Group, Menu, MenuDivider, rem, Text, UnstyledButton } from "@mantine/core";
 import { IconUserCircle, IconShoppingCart, IconArrowBarRight } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
 export function Navbar() {
   const loged = false;
+  const navigate = useNavigate();
   return (
     <Box p="sm" style={{borderBottom:"1px solid"}}>
         <Group justify="space-between" h="100%">
             <Text size="xl" fw={700}>Ecommerce</Text>
             <Group h="100%">
               <UnstyledButton 
-                component="a" href="#hello" 
-                onClick={(event) => event.preventDefault()}
+                onClick={() => navigate("/") }
                 onMouseOver={(event) => event.currentTarget.style.color = "green"}
                 onMouseOut={(event) => event.currentTarget.style.color = "black"}
               >
                 <Text fw={510}>Home</Text>
               </UnstyledButton>
               <UnstyledButton 
-                component="a" href="#hello" 
-                onClick={(event) => event.preventDefault()}
+                onClick={() => navigate("/products") }
                 onMouseOver={(event) => event.currentTarget.style.color = "green"}
                 onMouseOut={(event) => event.currentTarget.style.color = "black"}
                 >
@@ -52,7 +52,11 @@ export function Navbar() {
                     <Menu.Item
                       rightSection={<IconArrowBarRight />}
                     >
-                      <Text> Go to my Cart</Text>
+                      <UnstyledButton
+                        onClick={() => navigate("/cart") }
+                      >
+                        <Text>Go to my Cart</Text>
+                      </UnstyledButton>
                     </Menu.Item>  
                   </Menu.Dropdown>
                 </Menu>
@@ -71,7 +75,7 @@ export function Navbar() {
                       null
                     ) : (
                       <Menu.Label>
-                        <Button>Log in</Button>
+                        <Button onClick={() => navigate("/login")}>Log in / Sing up</Button>
                       </Menu.Label>
                     )}
                   </Menu.Dropdown>
