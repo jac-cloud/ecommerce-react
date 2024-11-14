@@ -1,6 +1,6 @@
 import { useForm } from "@mantine/form"
 import { Navbar } from "../components"
-import { Anchor, Button, Card, Center, Group, PasswordInput, Stack, Text, TextInput } from "@mantine/core"
+import {Button, Card, Center, PasswordInput, Stack, TextInput } from "@mantine/core"
 
 export function Login() {
     const form = useForm({
