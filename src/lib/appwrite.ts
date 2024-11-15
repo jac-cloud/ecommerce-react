@@ -7,5 +7,5 @@ client
     .setEndpoint(process.env.APPWRITE_ENDPOINT || '')
     .setProject(process.env.APPWRITE_PROJECT_ID || '')
 
-    export const account = new Account(client);
-    export { ID } from 'appwrite';
+export const account = new Account(client);
+export { ID } from 'appwrite';
