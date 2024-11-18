@@ -5,7 +5,7 @@ import { setToken } from "../lib/store/userSlice"
 import {Button, Card, Center, PasswordInput, Stack, TextInput } from "@mantine/core"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { account, ID } from './lib';
+import { account, ID } from '../lib';
 
 export function Login() {
     const navigate = useNavigate();
