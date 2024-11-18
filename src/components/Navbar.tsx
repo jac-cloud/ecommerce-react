@@ -8,34 +8,7 @@ export function Navbar() {
   return (
     <Box p="sm" style={{borderBottom:"1px solid"}}>
         <Group justify="space-between" h="100%">
-            <Text size="xl" fw={700}>Ecommerce</Text>
-            <Group h="100%">
-              <UnstyledButton 
-                onClick={() => navigate("/") }
-                onMouseOver={(event) => event.currentTarget.style.color = "green"}
-                onMouseOut={(event) => event.currentTarget.style.color = "black"}
-              >
-                <Text fw={510}>Home</Text>
-              </UnstyledButton>
-              <UnstyledButton 
-                onClick={() => navigate("/products") }
-                onMouseOver={(event) => event.currentTarget.style.color = "green"}
-                onMouseOut={(event) => event.currentTarget.style.color = "black"}
-                >
-                  <Text fw={510}>Products</Text>
-                </UnstyledButton>
-              <UnstyledButton 
-                component="a" 
-                href="#hello" 
-                onClick={(event) => event.preventDefault()}
-                variant="subtle"
-                color="blue"
-                onMouseOver={(event) => event.currentTarget.style.color = "green"}
-                onMouseOut={(event) => event.currentTarget.style.color = "black"}
-                >
-                  <Text fw={510}>Support</Text>
-                </UnstyledButton>
-            </Group>
+            <Text size="xl" fw={700}>Sandystore</Text>
             <Group>
               <Box> 
                 <Menu>
